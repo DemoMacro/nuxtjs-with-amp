@@ -2,7 +2,7 @@
   "name": "nuxtjs-with-amp",
   "version": "1.0.0",
   "dependencies": {
-    "nuxt-edge": "^2.9.0-26089929.de7ed24b"
+    "nuxt": "^2.11.0"
   },
   "scripts": {
     "dev": "nuxt",
