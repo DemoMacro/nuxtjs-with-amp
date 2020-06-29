@@ -79,3 +79,7 @@ dist
 
 # IDE
 .idea
+
+# npm or yarn lock file
+package-lock.json
+yarn.lock
