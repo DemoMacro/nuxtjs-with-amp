@@ -4,7 +4,7 @@ const modifyHtml = (html) => {
   // Remove every script tag from generated HTML
   html = html.replace(
     /<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi,
-    '',
+    ''
   );
   // Add AMP script before </head>
   const ampScript =
@@ -19,22 +19,22 @@ export default {
       { charset: 'utf-8' },
       {
         name: 'viewport',
-        content: 'width=device-width,minimum-scale=1,initial-scale=1',
-      },
+        content: 'width=device-width,minimum-scale=1,initial-scale=1'
+      }
     ],
     link: [
       { rel: 'canonical', href: '/' },
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css?family=Roboto',
-      },
-    ],
+        href: 'https://fonts.googleapis.com/css?family=Roboto'
+      }
+    ]
   },
   css: ['~/assets/main.css'],
   loading: false, // Disable loading bar since AMP will not generate a dynamic page
   render: {
     // Disable resourceHints since we don't load any scripts for AMP
-    resourceHints: false,
+    resourceHints: false
   },
   hooks: {
     // This hook is called before generatic static html files for SPA mode
@@ -44,6 +44,6 @@ export default {
     // This hook is called before rendering the html to the browser
     'render:route': (url, page, { req, res }) => {
       page.html = modifyHtml(page.html);
-    },
-  },
+    }
+  }
 };
