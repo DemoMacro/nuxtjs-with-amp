@@ -16,14 +16,14 @@ const modifyHtml = (html) => {
 export default {
   head: {
     meta: [
-      { charset: 'utf-8' },
+      {charset: 'utf-8'},
       {
         name: 'viewport',
         content: 'width=device-width,minimum-scale=1,initial-scale=1'
       }
     ],
     link: [
-      { rel: 'canonical', href: '/' },
+      {rel: 'canonical', href: '/'},
       {
         rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css?family=Roboto'
@@ -42,7 +42,7 @@ export default {
       page.html = modifyHtml(page.html);
     },
     // This hook is called before rendering the html to the browser
-    'render:route': (url, page, { req, res }) => {
+    'render:route': (url, page, {req, res}) => {
       page.html = modifyHtml(page.html);
     }
   }
